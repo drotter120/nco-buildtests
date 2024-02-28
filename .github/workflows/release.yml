@@ -11,6 +11,7 @@ jobs:
     steps:
       - name: Checkout code
         run: |
+          apt update
           apt install gcc #ADD ALL DEPENDENCIES HERE
     
       - name: Checkout code
