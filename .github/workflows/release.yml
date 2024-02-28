@@ -10,6 +10,10 @@ jobs:
 
     steps:
       - name: Checkout code
+        run: |
+          apt install gcc #ADD ALL DEPENDENCIES HERE
+    
+      - name: Checkout code
         uses: actions/checkout@v2
 
       - name: Set up CMake
