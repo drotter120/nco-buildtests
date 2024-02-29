@@ -1,7 +1,8 @@
 name: CMake Build
 
 on:
-  release:
+  # release:
+  workflow_dispatch:
     types: [published]
 
 jobs:
