@@ -12,7 +12,12 @@ jobs:
       - name: Checkout code
         run: |
           apt update
-          apt install gcc #ADD ALL DEPENDENCIES HERE
+          apt install antlr libantlr-dev # ANTLR
+          apt install libdap-dev # DAP
+          apt install bison cmake flex gcc g++ # GNU toolchain
+          apt install gsl-bin libgsl-dev # GSL
+          apt install libnetcdf-dev netcdf-bin # netCDF
+          apt install libudunits2-dev # UDUnits
     
       - name: Checkout code
         uses: actions/checkout@v2
