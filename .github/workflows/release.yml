@@ -13,12 +13,12 @@ jobs:
       - name: Checkout code part 1
         run: |
           sudo bash -c "apt update
-          apt install antlr libantlr-dev -y # ANTLR
-          apt install libdap-dev -y # DAP
-          apt install bison cmake flex gcc g++ -y # GNU toolchain
-          apt install gsl-bin libgsl-dev -y # GSL
-          apt install libnetcdf-dev netcdf-bin -y # netCDF
-          apt install libudunits2-dev -y # UDUnits
+          apt install -y antlr libantlr-dev
+          apt install -y libdap-dev
+          apt install -y bison cmake flex gcc g++
+          apt install -y gsl-bin libgsl-dev
+          apt install -y libnetcdf-dev netcdf-bin
+          apt install -y libudunits2-dev
           "
     
       - name: Checkout code part 2
