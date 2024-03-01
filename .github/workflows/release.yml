@@ -1,16 +1,16 @@
 name: CMake Build
 
 on:
-  # release:
+  release:
+    types: [published]
+    
   workflow_dispatch:
-    #types: [published]
-
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code part 1
+      - name: Install Dependencies
         run: |
           sudo bash -c "apt update
           apt install -y antlr libantlr-dev
@@ -21,10 +21,10 @@ jobs:
           apt install -y libudunits2-dev
           "
     
-      - name: Checkout code part 2
+      - name: Checkout code 
         uses: actions/checkout@v2
 
-      - name: Set up CMake
+      - name: Run CMake
         run: |
           mkdir build
           cd build
@@ -35,6 +35,7 @@ jobs:
         run: |
           # Add commands to run tests here
 
+#you can replace this part with automatic release creation w/ the files we build using https://github.com/marketplace/actions/automatic-releases
       - name: Upload artifacts
         uses: actions/upload-artifact@v2
         with:
