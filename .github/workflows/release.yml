@@ -13,12 +13,12 @@ jobs:
       - name: Checkout code
         run: |
           apt update
-          apt install antlr libantlr-dev # ANTLR
-          apt install libdap-dev # DAP
-          apt install bison cmake flex gcc g++ # GNU toolchain
-          apt install gsl-bin libgsl-dev # GSL
-          apt install libnetcdf-dev netcdf-bin # netCDF
-          apt install libudunits2-dev # UDUnits
+          apt install antlr libantlr-dev -y # ANTLR
+          apt install libdap-dev -y # DAP
+          apt install bison cmake flex gcc g++ -y # GNU toolchain
+          apt install gsl-bin libgsl-dev -y # GSL
+          apt install libnetcdf-dev netcdf-bin -y # netCDF
+          apt install libudunits2-dev -y # UDUnits
     
       - name: Checkout code
         uses: actions/checkout@v2
